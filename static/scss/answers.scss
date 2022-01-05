@@ -26,3 +26,78 @@
 {
   // Insert Overlay styling here
 }
+
+.HitchhikerDocumentStandard-titleLink {
+  display:inline-block;
+}
+
+.copyMenuWrapper {
+  position: relative;
+  margin-left: auto;
+  padding: 0.5%;
+  border-radius: 2px;
+  float: right;
+  visibility:  hidden;
+}
+
+#js-answersDirectAnswer:hover .copyMenuWrapper,
+.HitchhikerResultsStandard-Card:hover .copyMenuWrapper {
+  visibility: visible;
+}
+
+.copyMenuWrapper .copyMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyMenuWrapper .copyMenuOptionsWrapper {
+  position: absolute;
+  background-color: var(--hh-answers-background-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: var(--yxt-border-radius);
+  right: 0px;
+  top: 100%;
+  font-size: var(--yxt-font-size-md);
+  font-weight: normal;
+  z-index: 1;
+}
+.copyMenuWrapper ul {
+  list-style: none;
+  margin: 10%;
+  padding: 0;
+  display: none;
+  flex-wrap: wrap;
+}
+
+.copyMenuWrapper ul li {
+  min-width: 160px;
+  display: none;
+  flex-direction: column;
+  color: var(--yxt-color-text-primary);
+}
+
+.copyMenuWrapper:hover {
+  background-color: rgb(161, 161, 161, 0.5);
+}
+
+.copyMenuWrapper ul li:hover {
+  color: var(--yxt-color-brand-hover);
+  cursor: pointer;
+}
+
+.copyMenuWrapper:hover ul,
+.copyMenuWrapper:hover ul li.copyMenu-copy-option.made-visible,
+.copyMenuWrapper:hover ul li.copyMenu-copied-message.made-visible,
+.copyMenuWrapper ul li.copyMenu-copied-message.made-visible div
+{
+  display: flex;
+}
+
+.copyMenu-copied-message,
+.copyMenu-copied-message div,
+.copyMenuWrapper:hover ul li.copyMenu-copy-option.not-visible,
+.copyMenuWrapper ul li.copyMenu-copy-option.not-visible div
+{
+  display: none;
+}
